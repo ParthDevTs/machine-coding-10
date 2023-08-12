@@ -6,7 +6,9 @@ import { useParams } from 'react-router-dom';
 function ProductDetailPage() {
     const { inventory } = useInventory();
     const { productId } = useParams()
-    const Product = inventory.find(item => item.id === parseInt(productId))
+    const Product = inventory?.find(item => item.id == productId)
+    console.log(productId, "id")
+    console.log(Product)
     return (
         <div className='Inventory DashBoardPage w-screen flex'>
             <LeftSideBar />

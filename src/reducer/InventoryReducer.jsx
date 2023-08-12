@@ -2,7 +2,8 @@
 export const InventoryReducer = (state, action) => {
     switch (action.type) {
         case "ADD__NEW__PRODUCT":
-            localStorage.setItem("inventory", [...state.inventory, action.payload])
+
+            localStorage.setItem("inventory", JSON.stringify([...state.inventory, action.payload]))
             return {
                 ...state,
                 inventory: [...state.inventory, action.payload],
