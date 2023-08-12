@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 function ProductDetailPage() {
     const { inventory } = useInventory();
     const { productId } = useParams()
+    // eslint-disable-next-line 
     const Product = inventory?.find(item => item.id == productId)
     console.log(productId, "id")
     console.log(Product)

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useInventory } from '../context/inventoryContext'
 
 function ProductListing({ productData: { id, name, imageUrl, description, price, stock, supplier } }) {
 
